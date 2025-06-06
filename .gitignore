@@ -9,4 +9,5 @@
 [Ss]cripts
 pyvenv.cfg
 .venv
+Pokedle/venv
 pip-selfcheck.json
