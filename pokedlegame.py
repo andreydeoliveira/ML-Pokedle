@@ -20,28 +20,25 @@ class Pokedle:
                 pokemonCheck["type2"] == self.pokemondia["type2"],
                 pokemonCheck["habitat"] == self.pokemondia["habitat"],
                 pokemonCheck["color"] == self.pokemondia["color"],
-                pokemonCheck["evolutionStage"] == self.pokemondia["evolutionStage"],
-                pokemonCheck["height"] == self.pokemondia["height"],
-                pokemonCheck["weight"] == self.pokemondia["weight"])
                 
+                0 if pokemonCheck["evolutionStageGen1"] == self.pokemondia["evolutionStageGen1"] else -1 if int(pokemonCheck["evolutionStageGen1"]) < int(self.pokemondia["evolutionStageGen1"]) else 1,                
+                0 if pokemonCheck["height"] == self.pokemondia["height"] else -1 if float(pokemonCheck["height"]) < float(self.pokemondia["height"]) else 1,                
+                0 if pokemonCheck["weight"] == self.pokemondia["weight"] else -1 if float(pokemonCheck["weight"]) < float(self.pokemondia["weight"]) else 1)                
 
 # Criando instância
-poke = Pokedle()
-poke.newgame()
+# poke = Pokedle()
+# poke.newgame()
+# 
+# 
+# pokemon = input("Nome do pokemon: ")
+# result = poke.check(pokemon)
+# print(result)
+# 
+# while not all(result):
+#     print("Pokemon errado")
+#     pokemon = input("Nome do pokemon: ")
+#     result = poke.check(pokemon)
+#     print(result)
+# 
+# print("Acertou")
 
-# Mostrando só o nome
-print(poke.pokemondia["championName"])
-
-print('-------')
-
-lista = ['Poliwrath', 'Arcanine', 'Patolino', poke.pokemondia["championName"]]
-
-for data in lista:
-    result = poke.check(data)
-    if (result == None):
-        print(f'Pokémon não encontrado: {data}')
-    elif (all(result)):
-        print(f'Pokémon encontrado: {data}')
-        break
-    else:
-        print(result)
