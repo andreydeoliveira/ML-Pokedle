@@ -10,6 +10,9 @@ class Pokedle:
     def newgame(self):
         self.pokemondia = random.choice(self.pokedata)
 
+    def setpokemon(self, name):
+        self.pokemondia = next((p for p in self.pokedata if p["championName"] == name), None)
+
     def check(self, name):
         pokemonCheck = next((p for p in self.pokedata if p["championName"] == name), None)
 
