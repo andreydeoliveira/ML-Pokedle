@@ -16,7 +16,7 @@ class Pokedle:
     def check(self, name):
         pokemonCheck = next((p for p in self.pokedata if p["championName"] == name), None)
 
-        if (pokemonCheck == None):
+        if (pokemonCheck is None):
             return None
                 
         return (pokemonCheck["type1"] == self.pokemondia["type1"],
