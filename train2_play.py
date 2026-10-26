@@ -24,7 +24,7 @@ def toTupla(valor):
 # ou definir manualmente
 #poke_game.setpokemon(lista_pokemons[0])  # exemplo, pega o primeiro Pokémon
 #poke_game.newgame()
-poke_game.setpokemon('Oddish')
+poke_game.setpokemon('Machamp')
 
 # Lista de Pokémon disponíveis
 available_list = lista_pokemons.copy()
